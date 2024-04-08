@@ -12,7 +12,7 @@ Steps for running the simulations
 
 1. Create a yaml file based on below format, for example, betting on a match ticket
 ![Alt text]([image.jpg](https://github.com/Asad1287/decision_trees_simulations/blob/main/image.JPG) "Ticket Betting")
-![Alt text]([https://example.com/path/to/image.png](https://github.com/Asad1287/decision_trees_simulations/blob/main/image.JPG) "Optional title")
+![Alt text](https://github.com/Asad1287/decision_trees_simulations/blob/main/image.JPG "Optional title")
 
 ```yaml
 # Your YAML content goes here
