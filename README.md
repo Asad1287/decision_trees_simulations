@@ -10,7 +10,9 @@ Project implemented in the jupyter notebook
 
 Steps for running the simulations 
 
-1. Create a yaml file based on below format, for example betting on a match ticket
+1. Create a yaml file based on below format, for example, betting on a match ticket
+![Alt text](image.jpg "Ticket Betting")
+
 ```yaml
 # Your YAML content goes here
    start:
