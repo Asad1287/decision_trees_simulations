@@ -101,6 +101,39 @@ Match2BWin:
   cost_params:
     loc: 5
     scale: 0
+
+
+2. Load the yaml file and run the following script to start the simulation and generate results
+
+def load_resource_config(file_path):
+    with open(file_path, 'r') as file:
+        config = yaml.safe_load(file)
+
+    resource_configs = {}
+    for resource_name, resource_data in config.items():
+        children = [(child_name, probability) for child_data in resource_data.get('children', []) for child_name, probability in child_data.items()]
+        resource_configs[resource_name] = {
+            'capacity': resource_data['capacity'],
+            'service_time_dist': resource_data['service_time_dist'],
+            'service_time_params': resource_data['service_time_params'],
+            'cost_dist': resource_data['cost_dist'],
+            'cost_params': resource_data['cost_params'],
+            'children': children
+        }
+
+    return resource_configs
+
+if __name__ == "__main__":
+    num_simulations = 10
+    num_entities_per_sim = 1
+    file_path = 'simulation.yaml'
+    resource_configs = load_resource_config(file_path)
+
+    entry_point = 'start'
+    inter_arrival_time_dist = Distribution('uniform', {'loc': 0, 'scale': 5})
+
+    runner = Runner(num_simulations, num_entities_per_sim, resource_configs, entry_point, EntityItem, inter_arrival_time_dist)
+    runner.run_simulations()
    
 
 
