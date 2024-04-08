@@ -1,5 +1,5 @@
 # Python discrete event simulation for complex decision making 
-A Python-based Discrete Event Simulation (DES) project using the SimPy library to model decision-making scenarios and risk profiling for project scenarios and decisions
+The project is build atop python Simpy DES(Discrete Event Simulation) Framework and is a way to apply simulation models decision-making scenarios and risk profiling for project scenarios and decisions. This can be used in several real-world cases like oil drilling , investment decision making , project management PERT analysis
 
 1. Probabilistic Event Modeling: Simulates key decision events in complex projects with configurable probabilities.
 2. Decision Points: This section incorporates decision points where alternative courses of action can be chosen (e.g., equipment upgrades, mitigation strategies).
